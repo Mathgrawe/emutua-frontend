@@ -1,4 +1,3 @@
-// src/components/PageHeader.js
 export default function PageHeader({ searchTerm, onSearchChange, onNewProduct }) {
   return (
     <div className="mb-8">
