@@ -1,7 +1,5 @@
-// src/components/ProductTable.js
 import ProductRow from './ProductRow';
 
-// 1. Receba onEdit e onDelete aqui
 export default function ProductTable({ products, onEdit, onDelete }) {
   return (
     <div className="bg-white shadow-md rounded-lg overflow-hidden border border-gray-200">
@@ -18,7 +16,6 @@ export default function ProductTable({ products, onEdit, onDelete }) {
         <tbody>
           {products.length > 0 ? (
             products.map((product) => (
-              // 2. Passe as funções para o ProductRow
               <ProductRow 
                 key={product.id} 
                 product={product} 
