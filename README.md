@@ -1,36 +1,61 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🛍️ Frontend - Gerenciamento de Produtos
 
-## Getting Started
+Este é o projeto de frontend para a aplicação de **Gerenciamento de Produtos**, desenvolvido como parte do processo seletivo para Desenvolvedor Full Stack na **eMutua Digital**.
 
-First, run the development server:
+Construído com **Next.js** e **React**, esta interface consome a **API RESTful** do backend para fornecer uma experiência de usuário reativa e moderna para as operações de **CRUD de produtos**.
+
+---
+
+## ✨ Funcionalidades
+
+- **Listagem de Produtos**: Exibição clara e organizada de todos os produtos em uma tabela responsiva.
+- **CRUD Interativo**: Criação, Atualização e Exclusão de produtos através de um painel lateral (_drawer_) interativo, utilizando Headless UI para máxima acessibilidade e customização.
+- **Busca com Debounce**: Busca de produtos em tempo real que consome o endpoint do OpenSearch no backend, com lógica de "debouncing" para otimizar as chamadas à API.
+- **Confirmação de Ações**: Modal de confirmação para ações destrutivas, como a exclusão de um produto.
+- **Design Moderno**: Interface limpa, profissional e responsiva construída com Tailwind CSS.
+
+---
+
+## 🛠️ Tech Stack
+
+- **Framework**: Next.js 15 
+- **Biblioteca UI**: React 19
+- **Estilização**: Tailwind CSS
+- **Componentes**: Headless UI
+- **Ícones**: Heroicons
+- **Linguagem**: JavaScript
+
+---
+
+## 🚀 Instalação e Execução
+
+### Pré-requisitos
+
+- **Node.js** (v18 ou superior)
+- **npm**
+- O backend (**emutua-backend**) deve estar em execução para que a API esteja disponível.
+
+### 1. Clonar o Repositório
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone <URL_DO_SEU_REPOSITORIO_FRONTEND>
+cd emutua-frontend
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 2. Instalar as Dependências
+```bash
+npm install
+```
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## 3. Configurar as Variáveis de Ambiente
+Crie um arquivo .env.local na raiz do projeto com o seguinte conteúdo:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```bash
+NEXT_PUBLIC_API_URL=http://localhost/api
+## Altere a URL conforme necessário para apontar para a sua API.
+```
+## 4. Rodar o Servidor de Desenvolvimento
+```bash
+npm run dev
+```
+Abra http://localhost:3000 no navegador para ver a aplicação em funcionamento.
